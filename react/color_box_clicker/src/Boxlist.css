@@ -1,0 +1,11 @@
+.boxlist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px; /* Adjust width according to your needs */
+}
+
+.colorbox {
+    width: 20%;
+    padding-bottom: 20%;
+    cursor: pointer;
+}

@@ -1,0 +1,5 @@
+.colorbox {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #000; /* Optional: to see the borders between the color boxes */
+}
