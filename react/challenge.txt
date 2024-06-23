@@ -1,0 +1,2 @@
+lv 1 : color box clicker
+lv 2: score keeper
