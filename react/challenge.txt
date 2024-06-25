@@ -1,2 +1,2 @@
-lv 1 : color box clicker
-lv 2: score keeper
+lv 1 : color box clicker : lecture 644
+lv 2: score keeper :lecture 654
