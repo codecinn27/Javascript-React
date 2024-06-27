@@ -1,2 +1,24 @@
 lv 1 : color box clicker : lecture 644
+- each row will have 5 box
+- can manually set how many box you want
+- once click the box , the colour will change randomly
+- all box will change randomly when the page is refresh
+
 lv 2: score keeper :lecture 654
+- can manually set how many player you want
+- can increase and decrease the value based on the button press
+- each player will have its own score
+- have a reset button to reset all the value
+- have win condition
+- once win condition reached (a specific number) no button can be pressed to increase or decrease the state
+
+lv 3: boxgrid 
+- change colour for each click
+- have reset button to reset all box colour
+
+lv 4: lucky 7 : lecture 655
+- win condition : same value, more than a specific value, less than a specific value, lucky number
+- color based on what color passed in
+- full set lucky7 can be repeat
+- can set the number of dice 
+- can manually set its own title
