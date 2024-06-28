@@ -2,14 +2,12 @@ import { useState } from "react";
 
 function SignupFormV2(){
     const [formData, setFormData] = useState({firstname: "", lastname: "", password:""});
-
     const handleChange = (evt) =>{
         const changedField = evt.target.name;
         const newValue = evt.target.value;
         //console.log(changedField, newValue);
         setFormData(currData=>{
-            currData[changedField] = newValue;
-            return {...currData }
+            return {...currData, [changedField]: newValue };
         })
     }
 

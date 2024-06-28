@@ -22,3 +22,9 @@ lv 4: lucky 7 : lecture 655
 - full set lucky7 can be repeat
 - can set the number of dice 
 - can manually set its own title
+
+
+lv 5: shopping list example
+- parent : shopping list (manages a list of shopping items)
+- child : newlistitemform (form to add a new item to the list)
+- update the shopping list when submit button is pressed

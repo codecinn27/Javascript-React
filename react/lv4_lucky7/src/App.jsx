@@ -29,6 +29,7 @@ function App() {
       />
       <LuckyN winCheck={moreThan10} title="Roll more than 10" color="#43hd13"/>
       <LuckyN winCheck={lucky7} title="Lucky 7" color="#37B7C3"/>
+      <BoxGrid />
     </>
   );
 }
