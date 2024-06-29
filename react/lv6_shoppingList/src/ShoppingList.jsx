@@ -9,7 +9,7 @@ function ShoppingList(){
 
     const addItem =(item)=>{
         setItems((currItem)=>{
-            return [...items, {...item, id:9}];
+            return [...currItem, {...item, id:9}];
         });
     };
 
