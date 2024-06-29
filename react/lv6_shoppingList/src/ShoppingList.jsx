@@ -1,28 +1,30 @@
 import { useState } from "react";
+import ShoppingListForm from './ShoppingListForm'
 function ShoppingList(){
-    const [formData, setFormData] = useState({ product: "", quantity: 0});
-    const handleChange = (evt) =>{
-        setFormData(currData =>{
-            return{
-                ...currData,[evt.target.name]: evt.target.value
-            };
-        })
-    }
+    const [items, setItems] = useState([
+        {id:1, product: "Banana", quantity: 8},
+        {id:2, product: "Apple", quantity: 2},
+        {id:3, product: "Guave", quantity: 1},
+    ]);
+
+    const addItem =(item)=>{
+        setItems((currItem)=>{
+            return [...items, {...item, id:9}];
+        });
+    };
+
     return(
-        <form >
-            <h1>Product is {formData.product} and quantity is : {formData.quantity}</h1>
-            <label htmlFor="product">Product Name: </label>
-            <input type="text" placeholder="product name" name="product" id="product" 
-            onChange={handleChange}
-            value={formData.product}
-            />
-            <label htmlFor="quantity">Product Quantity: </label>
-            <input type="number" placeholder="1" name="quantity" id="quantity" 
-            min="1" max="10"
-            onChange={handleChange}
-            value={formData.quantity}
-            />
-        </form>
+        <div>
+            <h1>Shopping List</h1>
+            <ol>
+                {items.map((e)=>(
+                    <li key={e.id}>
+                        {e.product} - {e.quantity}
+                    </li>
+                ))}
+            </ol>
+            <ShoppingListForm addItem={addItem}/>
+        </div>
     )
 }
 
