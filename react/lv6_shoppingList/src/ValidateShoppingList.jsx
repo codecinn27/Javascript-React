@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ShoppingListForm from './ShoppingListForm'
+import ShoppingListForm from './ValidateShoppingListForm'
 import { v4 as uuidv4 } from 'uuid';
 function ShoppingList(){
     const [items, setItems] = useState([
