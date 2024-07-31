@@ -1,3 +1,6 @@
+lv 0: emoji switcher and adder, delete
+
+
 lv 1 : color box clicker : lecture 644
 - each row will have 5 box
 - can manually set how many box you want
@@ -28,3 +31,6 @@ lv 5: shopping list example
 - parent : shopping list (manages a list of shopping items)
 - child : newlistitemform (form to add a new item to the list)
 - update the shopping list when submit button is pressed
+
+
+lv 6: to do list apps

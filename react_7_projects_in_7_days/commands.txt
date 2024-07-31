@@ -1,0 +1,15 @@
+i) To create react apps
+
+npx create-react-app .
+npm start
+
+
+ii) Tailwindcss
+-> follow steps written in the documentation
+npm install -D tailwindcss
+npx tailwindcss init
+
+-> in index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
