@@ -15,5 +15,13 @@ npx tailwindcss init
 
 5)input few lines of tailwindcss code to ensure tailwindcss is setup successfully
 
+6) npm install react-router-dom
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+
+-> writing route to direct to register or homepage
+
 Optional : 
-1) extension : Matetial Icon Theme
+1) extension 
+  i) Matetial Icon Theme
+  ii) ES7 React/Redux/GraphQL/React-Native snippets   (rfce for boilerplate for Register)
