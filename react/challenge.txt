@@ -1,5 +1,7 @@
 lv 0: emoji switcher and adder, delete
 
+lv 1 : emoji inverter
+
 
 lv 1 : color box clicker : lecture 644
 - each row will have 5 box

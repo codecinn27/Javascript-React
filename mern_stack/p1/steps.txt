@@ -1,0 +1,19 @@
+Steps:
+1) tailwindcss create frontend folder 
+https://tailwindcss.com/docs/guides/create-react-app
+
+2) manually create backend folder (server)
+- include subfolder (database, model, controller, router. server.js)
+
+3) create subfolder in client 
+-> inside src (component , pages -> Auth -> Register.js , Signin.js)
+-> complete setup
+
+4) npm install tailwindcss 
+npx tailwindcss init
+-> ignore the 8 vulnerabilities
+
+5)input few lines of tailwindcss code to ensure tailwindcss is setup successfully
+
+Optional : 
+1) extension : Matetial Icon Theme
