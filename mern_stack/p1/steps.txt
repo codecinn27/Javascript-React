@@ -21,10 +21,16 @@ import React from 'react';
 
 -> writing route to direct to register or homepage
 
+7) npm install react-icons
+- to use google icons
+import {FcGoogle} from "react-icons/fc";
+
+
 Optional : 
 1) extension 
-  i) Matetial Icon Theme
+  i) Material Icon Theme
   ii) ES7 React/Redux/GraphQL/React-Native snippets   (rfce for boilerplate for Register)
   iii) Tailwind CSS IntelliSense (hover the tailwindcss code to get more details)
   iv) Bootstrap 5 Quick Snippets
   v)HTML CSS Support
+  vi) Auto Import (automatically import thing that need library, help you define on-top)
