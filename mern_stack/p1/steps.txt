@@ -25,3 +25,6 @@ Optional :
 1) extension 
   i) Matetial Icon Theme
   ii) ES7 React/Redux/GraphQL/React-Native snippets   (rfce for boilerplate for Register)
+  iii) Tailwind CSS IntelliSense (hover the tailwindcss code to get more details)
+  iv) Bootstrap 5 Quick Snippets
+  v)HTML CSS Support
