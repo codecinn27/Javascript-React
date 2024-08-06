@@ -3,6 +3,8 @@ import React from 'react';
 import './App.css';
 import Home from './pages/Home/Home';
 import Register from './pages/Auth/Register';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/register' element={<Register/>}/>
       </Routes>
+      <ToastContainer position='top-center' />
     </Router>
   );
 }

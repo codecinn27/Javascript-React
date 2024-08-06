@@ -25,6 +25,68 @@ import React from 'react';
 - to use google icons
 import {FcGoogle} from "react-icons/fc";
 
+8) npm install axios
+9) once the basic of frontend registration page done, do axios and write send http post request with credential to check authentication
+10)npm install react-toastify
+
+----sample 1 -------
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const App = () => {
+  const notify = () => {
+    toast.success("Success notification!");
+    toast.error("Error notification!");
+    toast.warn("Warning notification!");
+    toast.info("Info notification!");
+  };
+
+  return (
+    <div>
+      <ToastContainer />
+      <button onClick={notify}>Notify!</button>
+    </div>
+  );
+};
+
+export default App;
+------------
+
+
+11) writing server code
+npm install express cors nodemon
+
+CORS stands for Cross-Origin Resource Sharing, a mechanism that allows restricted resources on a web page to be
+ requested from another domain outside the domain from which the first resource was served.
+
+--- example 1 ----
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+const corsOptions = {
+  origin: 'http://example.com', // Replace with your client's origin
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
+
+app.get('/example', (req, res) => {
+  res.json({ message: 'This is an example endpoint' });
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+----------------
+
+12) create router.js
+
+
+- to give out notification based on status code
 
 Optional : 
 1) extension 
