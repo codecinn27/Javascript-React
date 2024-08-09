@@ -84,9 +84,23 @@ app.listen(3000, () => {
 ----------------
 
 12) create router.js
-
-
 - to give out notification based on status code
+
+13) npm nodemon
+npm init
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+
+14) app.use(express.json());
+- to process json data
+
+15) npm i mongoose dotenv
+- create mern_stack_p1 database in atlas
+
+16)
+
 
 Optional : 
 1) extension 

@@ -9,8 +9,8 @@ function Register() {
     const [showPassword, setShowPassword] = useState(false);
     const handleRegister = async(e)=>{
         e.preventDefault();
-        // console.log("email: ", user.email);
-        // console.log("password: ", user.password);
+        console.log("email: ", user.email);
+        console.log("password: ", user.password);
         try{
             const response = await axios.post("http://localhost:5000/api/auth/register", user, {withCredentials: true}, );
             if(response.status ===200){
@@ -21,7 +21,7 @@ function Register() {
 
         }catch(error){
             console.log("Error message from register: ", error.response);
-            toast.error(error.response.data.message);
+            // toast.error(error.response.data.message);
         }
         
     }
