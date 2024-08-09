@@ -99,8 +99,8 @@ npm init
 15) npm i mongoose dotenv
 - create mern_stack_p1 database in atlas
 
-16)
-
+16)npm install bcrypt
+npm i jsonwebtoken
 
 Optional : 
 1) extension 
