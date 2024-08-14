@@ -102,6 +102,13 @@ npm init
 16)npm install bcrypt
 npm i jsonwebtoken
 
+17) copy from ui of register to create a signin page 
+- just change the colour and the api, name ,etc
+
+18) backend code for signin
+- success to bcrypt.compare from the input with the data in mongodb and output save
+  the token in local cookie like what it did at registration
+
 Optional : 
 1) extension 
   i) Material Icon Theme
@@ -110,3 +117,7 @@ Optional :
   iv) Bootstrap 5 Quick Snippets
   v)HTML CSS Support
   vi) Auto Import (automatically import thing that need library, help you define on-top)
+
+
+  client : npm run start
+  server: npm start

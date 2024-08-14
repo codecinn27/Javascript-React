@@ -54,6 +54,45 @@ const register = async (req,res) =>{
     // console.log("password is: ", password);
 };
 
+const signin = async (req,res) =>{
+    
+    try{
+        const {email, password} = req.body;
+        const emailRegex = /^\S+@\S+\.\S+/;
+        if(!emailRegex.test(email)){
+            return res
+            .status(400)
+            .json({error: "Invalid_email", message: "Invalid Email line65"});
+        }
+
+        const user = await User.findOne({email});
+        console.log("existingEmail: ", user);
+        
+        if(!user){
+            return res.status(400).json({message: "User not found"});
+        }
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if(!isPasswordValid){
+            return res.status(400).json({error: "Invalid password", message: "Invalid password"});
+        }
+
+        const token = jwt.sign({userId: user._id}, "codecinn",{
+            expiresIn : "7d",
+        });
+
+        res.cookie("mern_engine", token,{
+            httpOnly: true,
+            maxAge: 7*24*60*60*1000,  //7days * 24 hours* 60mins*60seconds*1000miliseconds
+        });
+        console.log("token: ",token);
+        res.status(200).json({message:"Sign In Successful!", token:token});
+        
+    }catch(error){
+        return res.status(500).json({ error: "Failed to sign in user" });
+    }
+};
+
 module.exports= {
-    register,
+    register, signin,
 }
