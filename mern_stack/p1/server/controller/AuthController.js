@@ -34,7 +34,7 @@ const register = async (req,res) =>{
         // const token = jwt.sign({userId: user._id}, process.env.secret_key,{
         //     expiresIn : "7d",
         // });
-        const token = jwt.sign({userId: user._id}, "codecinn",{
+        const token = jwt.sign({userId: user._id}, process.env.secret_key,{
             expiresIn : "7d",
         });
 
@@ -77,7 +77,7 @@ const signin = async (req,res) =>{
             return res.status(400).json({error: "Invalid password", message: "Invalid password"});
         }
 
-        const token = jwt.sign({userId: user._id}, "codecinn",{
+        const token = jwt.sign({userId: user._id}, process.env.secret_key ,{
             expiresIn : "7d",
         });
 

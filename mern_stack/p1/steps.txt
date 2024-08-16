@@ -109,6 +109,35 @@ npm i jsonwebtoken
 - success to bcrypt.compare from the input with the data in mongodb and output save
   the token in local cookie like what it did at registration
 
+19) passport (sign in with google)
+  i)requirement
+    - three module : passport passport-google jwt
+    - client id , client secret from google
+    - npm i passport passport-google-oauth20 passport-jwt cookie-parser
+  ii) in router use passport google instead of writing your own controller function
+   
+  route.get("auth/google", passport.authenticate("google", 
+      { scope: ["profile", "email"],
+          session: false
+      }));
+
+  iii)in server import passport module 
+
+  iv) in root create passport.js 
+   - include (user module, passport module, dotenv with config)
+   - passport.use (codeium auto generate everything)
+
+  v)add env file
+  - CLIENT_ID=
+    CLIENT_SECRET=
+
+  vi) get client id ,client secret in google cloud console
+  - need credit card
+
+  vii) initiallize passport and cookie in server.js
+
+  viii) write controller function for /google/callback in route and controller
+
 Optional : 
 1) extension 
   i) Material Icon Theme
