@@ -150,6 +150,7 @@ npm i jsonwebtoken
 - only authenticate user are allow to access the homepage
 
 21) crud 
+  create, get, getById, update, remove
 
 Optional : 
 1) extension 
