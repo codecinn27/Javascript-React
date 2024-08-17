@@ -4,11 +4,17 @@ const jwt = require("jsonwebtoken");
 const handleGoogleAuthCallback = async(req, res,next) =>{
 
     try{
-         const { email, googleId } = req.user;
+        const { email, id: googleId, displayName,  image} = req.user;
         console.log("User data From Google OAuth: ", req.user);
-        let user = await User.findOne({ email: email});
+        
+        let user = await User.findOne({ email});
         if (!user) {
-          user = new User({email,googleId});
+          user = await User({
+                email,
+                googleId,
+                displayName,
+                image,
+          });
           await user.save();
         }else{
             console.log("User already exists");
@@ -35,21 +41,11 @@ module.exports = {
 };
 
 
-/*
-        const { email, id: googleId, displayName, name, photos } = req.user;
-        console.log("User data From Google OAuth: ", req.user);
-        const firstName = name.givenName;
-        const lastName = name.familyName;
-        const image = photos[0].value;
-        
-        let user = await User.findOne({ email});
-        if (!user) {
-          user = await User({
-                email,
-                googleId,
-                firstName,
-                lastName,
-                displayName,
-                image,
-          });
-**/
+/**
+ The function of handleGoogleAuthCallback: 
+Extract Authorization Code/Token: The function extracts the authorization code or token from the query parameters.
+ Exchange Code for Tokens
+ Retrieve User Data
+ Authenticate/Authorize User: The function handles user login or registration based on the retrieved user data and tokens.
+ Redirect User: The function usually redirects the user to a protected area of your application or shows a success message.
+ */

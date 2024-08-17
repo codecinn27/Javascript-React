@@ -13,15 +13,17 @@ passport.use(
       },
       async (accessToken, refreshToken, profile, done) => {
         try {
- 
-            console.log("Google id: ",profile.id);       
+      
             let user = await User.findOne({ googleId: profile.id });
   
           if (!user) {
             // Create a new user if not found
             user = new User({
-              email: profile.emails[0].value,
-              googleId: profile.id,
+                googleId: profile.id,
+                displayName: profile.displayName,
+                image: profile.photos[0].value,
+                email: profile.emails[0].value,
+
             });
             
             await user.save();

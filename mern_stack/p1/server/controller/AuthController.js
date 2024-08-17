@@ -1,6 +1,33 @@
-const User = require("../model/User");
+const {User} = require("../model/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+
+const checkAuthStatus = async (req,res) =>{
+    var isAuthenticated;
+    console.log("cookies: ", req.cookies.mern_engine);
+    
+    const token = req.cookies.mern_engine;
+    if(!token){
+        return res.json({isAuthenticated: false});
+    }
+
+    try{
+
+        const decoded = jwt.verify(token, process.env.secret_key);
+        const userId = decoded.userId;
+        const user = await User.findById(userId);
+        if(user){
+            isAuthenticated = true;
+            
+        }
+        return res.json({isAuthenticated, user});
+
+    }catch(error){
+        console.log("Error from AutStatus",error);
+        return res.status(401).json({message: "User not logged in"});
+    }
+}
+
 const register = async (req,res) =>{
     
     try{
@@ -94,5 +121,5 @@ const signin = async (req,res) =>{
 };
 
 module.exports= {
-    register, signin,
+    register, signin, checkAuthStatus
 }

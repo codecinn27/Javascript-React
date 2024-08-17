@@ -7,6 +7,7 @@ const { handleGoogleAuthCallback } = require('../controller/handleGoogleAuthCall
 route.post("/register", authController.register);
 
 route.post("/signin", authController.signin);
+route.get("/status", authController.checkAuthStatus);
 
 route.get("/google/callback", passport.authenticate
     ("google", {

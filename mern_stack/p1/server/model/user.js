@@ -16,6 +16,12 @@ const userSchema = new mongoose.Schema(
         name:{
             type:String,
         },
+        image:{
+            type:String
+        },
+        displayName:{
+            type:String
+        }
     },
     {
         timeseries: true,

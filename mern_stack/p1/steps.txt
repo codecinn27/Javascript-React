@@ -138,6 +138,19 @@ npm i jsonwebtoken
 
   viii) write controller function for /google/callback in route and controller
 
+20) create a protected route 
+- prevent user from login homepage without any credential
+- client/src/components/auth/protectedRoute.js
+- useEffect 
+-       <Route path='/' element={
+          <ProtectedRoute>
+            <Home/>
+          </ProtectedRoute>
+          }/>
+- only authenticate user are allow to access the homepage
+
+21) crud 
+
 Optional : 
 1) extension 
   i) Material Icon Theme
