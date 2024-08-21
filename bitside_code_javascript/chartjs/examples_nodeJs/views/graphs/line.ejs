@@ -1,0 +1,33 @@
+<div>
+    <canvas id="lineChart" height="75vh"></canvas>
+</div>
+<script>
+    var lineChart = document.getElementById('lineChart');
+    var chart = new Chart(lineChart, {
+        type: 'line',
+        data: {
+            labels: ['Label1', 'Label2', 'Label3'],
+            datasets: [{
+                label: "New Dataset",
+                data: [12, 18, 19],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                text: "New Line Chart",
+                display: true,
+            },
+            scales: {},
+            legend: {
+                display: true,
+            },
+            tooltips: {
+                mode: ''
+            },
+            layout: {},
+            animation: {}
+        }
+    });
+</script>

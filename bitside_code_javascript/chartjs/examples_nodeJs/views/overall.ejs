@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overall Charts</title>
+  <link href="/css/styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Bar</h1>
+    <%- include('graphs/bar') %>
+    <h1>Area</h1>
+    <%- include('graphs/area') %>
+    <h1>Line</h1>
+    <%- include('graphs/line') %>
+    <h1>Pie</h1>
+    <%- include('graphs/pie') %>
+    <h1>Bubble</h1>
+    <%- include('graphs/bubble') %>
+    <h1>Scatter</h1>
+    <%- include('graphs/scatter') %>
+    <h1>Radar</h1>
+    <%- include('graphs/radar') %>
+    <h1>PolarArea</h1>
+    <%- include('graphs/polarArea') %>
+    <h1>Doughnut</h1>
+    <%- include('graphs/doughnut') %>
+  </div>
+  <script src="/js/charts.js"></script>
+</body>
+</html>

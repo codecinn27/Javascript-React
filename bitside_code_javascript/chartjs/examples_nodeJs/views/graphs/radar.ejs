@@ -1,0 +1,32 @@
+
+<canvas id="radarChart" height="75vh"></canvas>
+<script>
+var radarChart = document.getElementById('radarChart');
+var chart = new Chart(radarChart, {
+    type: 'radar',
+    data: {
+        labels: ['Label1', 'Label2', 'Label3'],
+        datasets: [{
+            label: "New Dataset",
+            data: [12, 18, 19],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            text: "New Radar Chart",
+            display: true,
+        },
+        scales: {},
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            mode: ''
+        },
+        layout: {},
+        animation: {}
+    }
+});
+</script>

@@ -1,0 +1,36 @@
+<div>
+    <canvas id="bubbleChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><canvas id="bubbleChart" width="" height=""></canvas>
+<script>
+var bubbleChart = document.getElementById('bubbleChart');
+var chart = new Chart(bubbleChart, {
+    type: 'bubble',
+    data: {
+        labels: ['Label1', 'Label2', 'Label3'],
+        datasets: [{
+            label: "New Dataset",
+            data: [[12, 4, 14], [18, 2, 12], [9, 8, 10]],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            text: "New Bubble Chart",
+            display: true,
+        },
+        scales: {},
+        events: [],
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            mode: ''
+        },
+        layout: {},
+        animation: {}
+    }
+});
+</script>

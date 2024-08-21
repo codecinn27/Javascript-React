@@ -1,0 +1,33 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="doughnutChart" width="" height=""></canvas>
+<script>
+var doughnutChart = document.getElementById('doughnutChart');
+var chart = new Chart(doughnutChart, {
+    type: 'doughnut',
+    data: {
+        labels: ['Label1', 'Label2', 'Label3'],
+        datasets: [{
+            label: "New Dataset",
+            data: [12, 18, 19],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            text: "New Doughnut Chart",
+            display: true,
+        },
+        scales: {},
+        events: [],
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            mode: ''
+        },
+        layout: {},
+        animation: {}
+    }
+});
+</script>

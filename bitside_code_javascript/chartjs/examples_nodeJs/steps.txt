@@ -1,0 +1,21 @@
+step 1: run auto_createFile.bat 
+- create all the folder automatically
+
+step 2: 
+npm init -y
+npm install express ejs
+paste the express template which include the 'EJS as the templating engine, Serve static files (CSS, JS)'
+
+step 3: use chartjs extension
+- ctrl+shift+p with below commands
+ChartJS: Import JS
+ChartJS: Insert Bar Graph
+ChartJS: Insert Bubble Graph
+ChartJS: Insert Doughnut Graph
+ChartJS: Insert Line Graph
+ChartJS: Insert Pie Graph
+ChartJS: Insert PolarArea Graph
+ChartJS: Insert Radar Graph
+ChartJS: Insert Scatter Graph
+
+step 4: - take out the options.event to have the hovering effects

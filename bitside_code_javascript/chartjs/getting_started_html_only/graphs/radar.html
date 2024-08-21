@@ -1,0 +1,34 @@
+
+<canvas id="radarChart" width="" height=""></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+var radarChart = document.getElementById('radarChart');
+var chart = new Chart(radarChart, {
+    type: 'radar',
+    data: {
+        labels: ['Label1', 'Label2', 'Label3'],
+        datasets: [{
+            label: "New Dataset",
+            data: [12, 18, 19],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            text: "New Radar Chart",
+            display: true,
+        },
+        scales: {},
+        events: [],
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            mode: ''
+        },
+        layout: {},
+        animation: {}
+    }
+});
+</script>

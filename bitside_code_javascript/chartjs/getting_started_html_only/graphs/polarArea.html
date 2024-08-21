@@ -1,0 +1,33 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="polarAreaChart" width="" height=""></canvas>
+<script>
+var polarAreaChart = document.getElementById('polarAreaChart');
+var chart = new Chart(polarAreaChart, {
+    type: 'polarArea',
+    data: {
+        labels: ['Label1', 'Label2', 'Label3'],
+        datasets: [{
+            label: "New Dataset",
+            data: [12, 18, 19],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            text: "New PolarArea Chart",
+            display: true,
+        },
+        scales: {},
+        events: [],
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            mode: ''
+        },
+        layout: {},
+        animation: {}
+    }
+});
+</script>

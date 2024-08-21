@@ -1,0 +1,34 @@
+
+    <canvas id="scatterChart" width="" height=""></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+var scatterChart = document.getElementById('scatterChart');
+var chart = new Chart(scatterChart, {
+    type: 'scatter',
+    data: {
+        labels: ['Label1', 'Label2', 'Label3'],
+        datasets: [{
+            label: "New Dataset",
+            data: [[12, 4, 14], [18, 2, 12], [9, 8, 22]],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            text: "New Scatter Chart",
+            display: true,
+        },
+        scales: {},
+        events: [],
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            mode: ''
+        },
+        layout: {},
+        animation: {}
+    }
+});
+</script>

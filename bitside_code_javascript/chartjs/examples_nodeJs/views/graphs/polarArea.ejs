@@ -1,0 +1,32 @@
+
+<canvas id="polarAreaChart" height="75vh"></canvas>
+<script>
+var polarAreaChart = document.getElementById('polarAreaChart');
+var chart = new Chart(polarAreaChart, {
+    type: 'polarArea',
+    data: {
+        labels: ['Label1', 'Label2', 'Label3'],
+        datasets: [{
+            label: "New Dataset",
+            data: [12, 18, 19],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            text: "New PolarArea Chart",
+            display: true,
+        },
+        scales: {},
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            mode: ''
+        },
+        layout: {},
+        animation: {}
+    }
+});
+</script>

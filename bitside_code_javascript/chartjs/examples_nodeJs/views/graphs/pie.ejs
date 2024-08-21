@@ -1,0 +1,32 @@
+
+<canvas id="pieChart" height="75vh"></canvas>
+<script>
+var pieChart = document.getElementById('pieChart');
+var chart = new Chart(pieChart, {
+    type: 'pie',
+    data: {
+        labels: ['Label1', 'Label2', 'Label3'],
+        datasets: [{
+            label: "New Dataset",
+            data: [12, 18, 19],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+            text: "New Pie Chart",
+            display: true,
+        },
+        scales: {},
+        legend: {
+            display: true,
+        },
+        tooltips: {
+            mode: ''
+        },
+        layout: {},
+        animation: {}
+    }
+});
+</script>
