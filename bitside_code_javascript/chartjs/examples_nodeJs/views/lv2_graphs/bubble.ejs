@@ -1,0 +1,66 @@
+<div>
+	<canvas id="bubbleChart"></canvas>
+</div>
+
+<script>
+    var ctx = document.getElementById('bubbleChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bubble',
+        data: {
+        datasets: [{ 
+            data: [
+                {x: 17, y: 3, r:11},
+            ],
+            label: "Blue Team",
+            borderColor: "#3e95cd",
+            backgroundColor: "rgb(62,149,205,0.1)",
+            borderWidth:2,
+            
+            }, { 
+            data: [
+                {x: 10, y: 3, r:20},
+            ],
+            label: "Green Team",
+            borderColor: "#3cba9f",
+            backgroundColor: "rgb(60,186,159,0.1)",
+            borderWidth:2,
+            
+            }, { 
+            data: [
+            {x: 4, y: 4, r:30},
+            ],
+            label: "Yellow Team",
+            borderColor: "#ffa500",
+            backgroundColor:"rgb(255,165,0,0.1)",
+            borderWidth:2,
+            
+            }, { 
+            data: [
+            {x: 14, y: 0, r:9}
+            ],
+            label: "Red Team",
+            borderColor: "#c45850",
+            backgroundColor:"rgb(196,88,80,0.1)",
+            borderWidth:2,
+            }
+        ]
+        },
+        options: {
+        scales: {
+            xAxes: [{ 
+            scaleLabel: {
+                display: true,
+                labelString: '# of wins'
+            }
+            }],
+            yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: '# of games'
+            }
+            }],
+        }
+        },
+    });
+
+</script>

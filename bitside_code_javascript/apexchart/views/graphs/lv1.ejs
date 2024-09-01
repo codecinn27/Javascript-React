@@ -1,0 +1,176 @@
+<div id="chart2"></div>
+
+<div id="customRadialBar"></div>
+
+<script>
+    function createHalfCircleRadialBarChart(chartId, seriesValue, label) {
+        var options = {
+          series: [seriesValue],
+          chart: {
+            type: 'radialBar',
+            offsetY: -20,
+            sparkline: {
+              enabled: true
+            }
+          },
+          plotOptions: {
+            radialBar: {
+              startAngle: -90,
+              endAngle: 90,
+              track: {
+                background: "#e7e7e7",
+                strokeWidth: '97%',
+                margin: 5,
+                dropShadow: {
+                  enabled: true,
+                  top: 2,
+                  left: 0,
+                  color: '#999',
+                  opacity: 1,
+                  blur: 2
+                }
+              },
+              dataLabels: {
+                name: {
+                  show: false
+                },
+                value: {
+                  offsetY: -2,
+                  fontSize: '22px'
+                }
+              }
+            }
+          },
+          grid: {
+            padding: {
+              top: -10
+            }
+          },
+          fill: {
+            type: 'gradient',
+            gradient: {
+              shade: 'light',
+              shadeIntensity: 0.4,
+              inverseColors: false,
+              opacityFrom: 1,
+              opacityTo: 1,
+              stops: [0, 50, 53, 91]
+            },
+          },
+          labels: [label],
+        };
+    
+        var chart = new ApexCharts(document.querySelector(chartId), options);
+        chart.render();
+    
+        // Function to update the chart dynamically
+        function updateChart(newValue) {
+          chart.updateSeries([newValue]);
+        }
+    
+        return {
+          updateChart: updateChart
+        };
+    }
+
+    function createCustomRadialBarChart(containerId, percentage, totalLabel, customText) {
+        var options = {
+          series: [percentage], // The percentage value displayed in the center
+          chart: {
+            height: 350,
+            type: 'radialBar',
+            offsetY: -20
+          },
+          plotOptions: {
+            radialBar: {
+              startAngle: -135,
+              endAngle: 135,
+              hollow: {
+                margin: 0,
+                size: '70%',
+                background: 'transparent',
+                dropShadow: {
+                  enabled: true,
+                  top: 3,
+                  left: 0,
+                  blur: 4,
+                  opacity: 0.24
+                }
+              },
+              track: {
+                background: '#e7e7e7',
+                strokeWidth: '67%',
+                dropShadow: {
+                  enabled: true,
+                  top: -3,
+                  left: 0,
+                  blur: 4,
+                  opacity: 0.35
+                }
+              },
+              dataLabels: {
+                showOn: 'always',
+                name: {
+                  offsetY: -20,
+                  show: false,
+                  color: '#888',
+                  fontSize: '17px'
+                },
+                value: {
+                  formatter: function (val) {
+                    return val + "%";
+                  },
+                  color: '#111',
+                  fontSize: '36px',
+                  show: true,
+                  offsetY: 10
+                },
+                total: {
+                  show: true,
+                  label: customText, // Custom text displayed in the center
+                  color: '#111',
+                  fontSize: '24px',
+                  fontWeight: 600
+                }
+              }
+            }
+          },
+          fill: {
+            type: 'gradient',
+            gradient: {
+              shade: 'dark',
+              type: 'horizontal',
+              shadeIntensity: 0.5,
+              gradientToColors: ['#ABE5A1'], // End color
+              inverseColors: false,
+              opacityFrom: 1,
+              opacityTo: 1,
+              stops: [0, 100]
+            }
+          },
+          stroke: {
+            lineCap: 'round'
+          },
+          labels: [totalLabel], // This label is shown around the chart
+        };
+      
+        var chart = new ApexCharts(document.querySelector(containerId), options);
+        chart.render();
+      
+        // Function to update the chart dynamically
+        function updateChart(newValue) {
+          chart.updateSeries([newValue]);
+        }
+      
+        return {
+          updateChart: updateChart
+        };
+      }
+
+
+    // Create and initialize a Half-Circle Radial Bar Chart
+    const radialChart2 = createHalfCircleRadialBarChart('#chart2', 76, 'Average Results');
+    radialChart2.updateChart(85);
+
+    createCustomRadialBarChart('#customRadialBar', 67, 'Total Label', 'Median Ratio');
+</script>

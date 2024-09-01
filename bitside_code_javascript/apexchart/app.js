@@ -1,6 +1,7 @@
-//npm init -y
-//npm install express ejs
-
+//npm i express ejs 
+// run auto_createFile.bat
+//paste expressjs file
+//npm install apexcharts
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -14,15 +15,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Route to render the overall page
 app.get('/', (req, res) => {
-  res.render('overall');
-});
+    res.render('overall');
+  });
 
-app.get('/lv2', (req,res)=>{
-  res.render('lv2');
-})
+app.get('/lv2', (req, res) => {
+    res.render('lv2');
+});
 
 // Start the server
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+  console.log(`Example app listening on port ${PORT}`)
+})

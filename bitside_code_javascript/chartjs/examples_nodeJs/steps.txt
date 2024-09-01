@@ -19,3 +19,10 @@ ChartJS: Insert Radar Graph
 ChartJS: Insert Scatter Graph
 
 step 4: - take out the options.event to have the hovering effects
+
+Refs:
+1) 
+https://ordinarycoders.com/blog/article/11-chart-js-examples
+
+2)
+https://www.w3schools.com/ai/ai_chartjs.asp
