@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>I'm a <span class="auto-type">Programmer</span></h1>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.auto-type', {
+            strings: ['Programmer', 'Developer', 'Designer'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+    </script>
+</body>
+
+</html>
+
+<!-- 
+Very Fast: typeSpeed: 10, backSpeed: 10
+Fast: typeSpeed: 50, backSpeed: 50
+Moderate: typeSpeed: 100, backSpeed: 100
+Slow: typeSpeed: 200, backSpeed: 200
+Very Slow: typeSpeed: 300, backSpeed: 300
+
+-->
