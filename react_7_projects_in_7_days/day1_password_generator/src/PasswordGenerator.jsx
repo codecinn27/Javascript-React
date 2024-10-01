@@ -23,7 +23,11 @@ const PasswordGenerator = () => {
     let generatedPassword = '';
 
     for(let i = 0; i < passwordLength; i++) {
+      const randomIndex = Math.floor(Math.random() * validChars.length);
+      generatedPassword += validChars.charAt(randomIndex);
     }
+
+    setPassword(generatedPassword);
   }
     
 
@@ -35,12 +39,16 @@ const PasswordGenerator = () => {
           <div className='mb-4 flex items-center justify-between'>
             <label htmlFor="">Password Length:</label>
             <input
+              value={passwordLength}
+              onChange={(e)=>setPasswordLength(e.target.value)}
               className='w-12 bg-purple-700 pl-2'
               type="number"/>
           </div>
           <div className='mb-4 flex items-center justify-between'>
             <label htmlFor="">Include Uppercase:</label>
             <ReactSwitch
+              checked={includeUppercase}
+              onChange={()=>setIncludeUppercase(!includeUppercase)}
               height={20}
               width={40}
               handleDiameter={18}
@@ -49,6 +57,8 @@ const PasswordGenerator = () => {
           <div className='mb-4 flex items-center justify-between'>
             <label htmlFor="">Include Numbers:</label>
             <ReactSwitch
+              checked={includeNumbers}
+              onChange={()=>setIncludeNumbers(!includeNumbers)}
               height={20}
               width={40}
               handleDiameter={18}
@@ -57,12 +67,17 @@ const PasswordGenerator = () => {
           <div className='mb-4 flex items-center justify-between'>
             <label htmlFor="">Include Special Characters:</label>
             <ReactSwitch
+              checked={includeSpecialCharacters}
+              onChange={()=>setIncludeSpecialCharacters(!includeSpecialCharacters)}
               height={20}
               width={40}
               handleDiameter={18}
             />
           </div>
-          <button className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-2 text-white font-bold rounded-md'>Generate Password</button>
+          <button 
+          onClick={generatePassword}
+          className='bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-2 text-white font-bold rounded-md'>Generate Password</button>
+          {password && <p className='font-normal text-white mt-2'>Generate Password: <span className='font-bold'>{password}</span></p>}
         </div>
       </div>
     </div>
