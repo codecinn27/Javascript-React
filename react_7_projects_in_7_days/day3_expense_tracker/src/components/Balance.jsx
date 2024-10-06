@@ -3,9 +3,9 @@ import TransactionMenu from './TransactionMenu'
 
 function Balance() {
 
-    const [balance, setBalance] = React.useState(1000);
-    const [income, setIncome] = React.useState(20);
-    const [expense, setExpense] = React.useState(3440);
+    const [balance, setBalance] = React.useState(0);
+    const [income, setIncome] = React.useState(0);
+    const [expense, setExpense] = React.useState(0);
 
     const onIncome = (amount) => {
         setIncome(income + amount);

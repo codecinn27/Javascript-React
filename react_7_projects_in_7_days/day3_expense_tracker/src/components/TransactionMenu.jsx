@@ -2,7 +2,7 @@ import React from 'react'
 
 const TransactionMenu = ({onIncome, onExpense}) => {
     const [menu, setMenu] = React.useState(false);
-    const [data,setData] = React.useState({});
+    const [data,setData] = React.useState([]);
     const [amount,setAmount] = React.useState();
     const [type,setType] = React.useState("");
     const [title,setTitle] = React.useState("");
@@ -31,7 +31,7 @@ const TransactionMenu = ({onIncome, onExpense}) => {
         onExpense(Number(amount));
       }
       //add the data to the last data array 
-      setData((prevData) => [...prevData, data]);
+      setData((prevData) => [...prevData, info]);
       //reset all the input to the default variable
       setAmount("");
       setTitle("");
@@ -86,7 +86,7 @@ const TransactionMenu = ({onIncome, onExpense}) => {
           </div>
         )}
       </div>  
-      {data.length >0 && data.map((dt) =>{
+      {data.length >0 && data.map((dt) =>(
         <div className='flex'>
         <div className={`flex w-[200px] justify-between flex-row text-white gap-4 mb-2 p-2 font-bold rounded-md
           ${dt.transactionType==='expense'? 'bg-red-500':'bg-green-800'}
@@ -95,7 +95,7 @@ const TransactionMenu = ({onIncome, onExpense}) => {
             <p>{dt.amount}</p>
           </div>
         </div>
-      })}
+      ))}
     </div>
   )
 }
